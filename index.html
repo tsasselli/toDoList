@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Todo List</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/todo.css">
-    <script type="text/javascript" src="assets/js/lib/jquery-3.3.1.min.js"></script>
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <title>Todo List</title>
+  <link rel="stylesheet" type="text/css" href="css/todo.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <body>
 
-    <header class="todoCompleted">
-      <input type="text" placeholder="Enter something TO-DO...">
-      button
+    <header class="todoInputHeader">
+      <input id="toDoInputField" type="text" placeholder="Enter something TO-DO...">
+      <button id="addButton">
+      <svg fill="rgb(32, 72, 201)" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+    </button>
     </header>
 
-<div id="container">
-  <h1>To-Do List</h1>
-  <input type="text" placeholder="type here to add new note" name="" value="">
+    <div class="container">
+      <ul class="todos" id="todo"></ul>
+      <ul class="todos" id="completedTodo"></ul>
+    </div>
 
-  <ul>
-    <li><span>X</span> Go to class</li>
-    <li><span>X</span> Go to gym</li>
-    <li><span>X</span> Go to Work</li>
-  </ul>
-
-</div>
-<script type="text/javascript" src="assets/js/todo.js">
-
-</script>
+    <script type="text/javascript" src="js/todo.js">
+    </script>
   </body>
+
 </html>
