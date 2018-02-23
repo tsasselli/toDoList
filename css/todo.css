@@ -74,11 +74,15 @@ ul.todos {
   width: 100%;
   float: left;
   list-style-type: none;
+  padding: 0;
   /* position: absolute; */
+}
+ul.nav {
+  margin: 0;
 }
 
 ul.todos li {
-  width: 91%;
+  width: 100%;
   min-height: 50px;
   float: left;
   font-size: 14px;
@@ -153,19 +157,6 @@ ul.todos li .listActionButtons button.removeButton svg .fill {
   transition: fill 0.6s ease;
 }
 
-/* ul.todos#completedTodo li .listActionButtons button.completeButton svg {
-  background: #25b99a;
-  border: 0px;
-}
-
-ul.todos:not(#completedTodo) li .listActionButtons button.completeButton:hover svg {
-  background: rgba(40, 190, 155, 0.75)
-} */
-
-/* ul.todos:not(#completedTodo) li .listActionButtons button.completeButton:hover svg .fill {
-  fill: #fff;
-} */
-
 ul.todos#completedTodo  {
   position: relative;
   padding: 60px 0 0 0;
@@ -198,6 +189,11 @@ ul.todos#completedTodo:before {
   width: 100%;
   float: left;
   padding: 15px;
+  text-align: left;
+}
+
+.content > ul {
+  display: inline-block;
 }
 
 /* #container {
