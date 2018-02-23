@@ -78,7 +78,7 @@ ul.todos {
 }
 
 ul.todos li {
-  min-width: 100%;
+  width: 91%;
   min-height: 50px;
   float: left;
   font-size: 14px;
@@ -125,7 +125,6 @@ ul.todos li .listActionButtons button {
 }
 
 /* creates a border between the two buttons*/
-
 ul.todos li .listActionButtons button:last-of-type::before {
   content: "";
   width: 2px;
