@@ -8,15 +8,14 @@ var removeSVG = `<svg class="removeButton" version="1.1"  xmlns="http://www.w3.o
 var completeSVG = `<svg clsss="completeButton" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612.005 612.005" style="enable-background:new 0 0 612.005 612.005;" xml:space="preserve"><g><g id="tick"><g><path class="fill" d="M595.601,81.553c-21.892-21.891-57.362-21.891-79.253,0L183.03,414.87l-88.629-76.133c-21.592-21.593-56.596-21.593-78.207,0c-21.592,21.592-21.592,56.614,0,78.206l132.412,113.733c21.592,21.593,56.596,21.593,78.207,0c2.167-2.166,3.979-4.576,5.716-6.985c0.317-0.299,0.672-0.505,0.99-0.804l362.083-362.101C617.473,138.914,617.473,103.425,595.601,81.553z"/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>`;
 rednerTodoList()
 var addButton = document.getElementById("addButton").addEventListener("click", function() {
-  var value = document.getElementById("toDoInputField").value;
+  var inputValue = document.getElementById("toDoInputField").value;
   //if there's text inside of toDoInputField.
-  if (value) {
-    addTodoListToDom(value);
+  if (inputValue) {
+    addTodoListToDom(inputValue);
     //reset's the input field when user adds a new value
     document.getElementById("toDoInputField").value = "";
-    data.todos.push(value);
-    updateDataObject();
-
+    data.todos.push(inputValue);
+    updateDataObject(inputValue);
   }
 });
 
@@ -43,7 +42,7 @@ function rednerTodoList() {
   }
 }
 
-//create a function that updates the data model for add delete and remove/move.
+//creates a function that updates the data model for add delete and remove/move.
 function updateDataObject() {
   localStorage.setItem("todoList", JSON.stringify(data)); ///JSON stringify converts the object into text so it can be stored
 }
